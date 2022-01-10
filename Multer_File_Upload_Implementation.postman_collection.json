@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "205ead16-466d-420a-917f-6bbc02b7779c",
+		"name": "Multer_File_Upload_Implementation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UploadFileAPI",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Celebal/Downloads/dummy_image1.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/user/uploadImage",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"uploadImage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
