@@ -6,38 +6,196 @@
 	},
 	"item": [
 		{
-			"name": "UploadFileAPI",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "image",
-							"type": "file",
-							"src": "/C:/Users/Celebal/Downloads/dummy_image1.png"
+			"name": "Single file upload",
+			"item": [
+				{
+					"name": "UploadFileAPI User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Celebal/Downloads/dummy_image1.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/user/uploadImage",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"uploadImage"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:8000/api/v1/user/uploadImage",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"user",
-						"uploadImage"
-					]
+				{
+					"name": "UploadFileAPI Admin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Celebal/Downloads/dummy_image2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/user/uploadAdminImage",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"uploadAdminImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadFileAPI SuperAdmin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Celebal/Downloads/dummy_image2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/user/uploadSuperAdminImage",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"uploadSuperAdminImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UploadFileAPI Vendor",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Celebal/Downloads/dummy_image2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/user/uploadVendorImage",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"uploadVendorImage"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Multiple file upload",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userImage",
+									"type": "file",
+									"src": "/C:/Users/Celebal/Downloads/dummy_image2.jpg"
+								},
+								{
+									"key": "adminImage",
+									"type": "file",
+									"src": "/C:/Users/Celebal/Downloads/dummy_image1.png"
+								},
+								{
+									"key": "superAdminImage",
+									"type": "file",
+									"src": "/C:/Users/Celebal/Downloads/dummy_image1.png"
+								},
+								{
+									"key": "vendorImage",
+									"type": "file",
+									"src": "/C:/Users/Celebal/Downloads/dummy_image3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/user/uploadArrayOfImages",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"uploadArrayOfImages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
